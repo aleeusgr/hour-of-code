@@ -2,13 +2,13 @@ from PIL import Image
 import colorsys
 import math
 
-px, py = -0.7746806106269039, -0.1374168856037867 #Tante Renate
-px, py, zoom = -0.74384935657398, -0.13170134084746293, 5788441.443619884
-px, py, zoom = 2.613577e-1, -2.018128e-3, 3.354786e+3
-px, py, zoom = -0.59990625, -0.4290703125, 1024
-px, py, zoom = -1.038650e-1, -9.584393e-1, 1.674667e+5
-px, py, zoom = -0.761574, -0.0847596, 78125
-px, py, zoom = -1.62917,-0.0203968, 3125
+# px, py = -0.7746806106269039, -0.1374168856037867 #Tante Renate
+# px, py, zoom = -0.74384935657398, -0.13170134084746293, 5788441.443619884
+# px, py, zoom = 2.613577e-1, -2.018128e-3, 3.354786e+3
+# px, py, zoom = -0.59990625, -0.4290703125, 1024
+# px, py, zoom = -1.038650e-1, -9.584393e-1, 1.674667e+5
+# px, py, zoom = -0.761574, -0.0847596, 78125
+# px, py, zoom = -1.62917,-0.0203968, 3125
 px, py, zoom = -0.75,0,1
 R = 3 
 max_iteration = 512
@@ -43,7 +43,7 @@ def gen_Mandelbrot_image():
       g = min(255,round(g*255))
       b = min(255,round(b*255))
       pix[x,y] = int(r) + (int(g) << 8) + (int(b) << 16)
-  bitmap.save("Mandelbrot_"+str(px)+"_"+str(py)+"_"+str(zoom)+".jpg")
+  # bitmap.save("Mandelbrot_"+str(px)+"_"+str(py)+"_"+str(zoom)+".jpg")
   bitmap.show()
   
 R=3/zoom
