@@ -1,2 +1,3 @@
-from turtle import *
-forward(100)
+import turtle as t
+t.delay(100)
+t.forward(100)
