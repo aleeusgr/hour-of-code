@@ -1,12 +1,12 @@
 import turtle as t
 
-def draw_petal(heading, legnth, angle):
+def draw_petal(heading, length, angle):
     t.setheading(heading)
-    t.forward(legnth) 
-    if legnth < 1:
+    t.forward(length) 
+    if length < 1:
         return True
     else:  
-        return draw_petal(heading + angle, legnth - 10, angle)
+        return draw_petal(heading + angle, length - 10, angle)
 
 # strange flower
 def flower(petals, complexity = 100, tightness = 60):
