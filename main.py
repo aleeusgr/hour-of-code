@@ -1,21 +1,29 @@
 import turtle as t
 
-def recursive_line(heading, lenght):
-    if heading >= 360:
-        heading -=360
-    t.forward(lenght) 
+def draw_petal(heading, lenght, angle):
     t.setheading(heading)
+    t.forward(lenght) 
     if lenght < 1:
         return True
     else:  
-        return recursive_line(heading + 80, lenght - 10)
+        return draw_petal(heading + angle, lenght - 10, angle)
 
 # strange flower
-for i in range(6):
-    recursive_line(i*60,100)
+def flower(petals, size = 100, tightness = 80):
+
+    ori = tightness*petals
+    draw_petal(ori, size, tightness)
+
     t.pu()
     t.goto((0,0))
     t.pd()
+
+    if petals <= 1:
+        return True
+    else:
+        return flower(petals-1, size, tightness) 
+
+flower(6, 150, 60)
 
 input()
 # line()
