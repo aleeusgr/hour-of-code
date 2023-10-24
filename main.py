@@ -11,7 +11,7 @@ def draw_petal(heading, length, angle):
 # strange flower
 def flower(petals, complexity = 100, tightness = 60):
 
-    ori = tightness*petals
+    ori = tightness*petals # note logic here
     draw_petal(ori, complexity, tightness)
 
     t.pu()
@@ -23,7 +23,7 @@ def flower(petals, complexity = 100, tightness = 60):
     else:
         return flower(petals-1, complexity, tightness) 
 
-flower(6, 200, 60)
+flower(9, 100, 78) # number of petals and the angle are linked?
 
 input()
 # line()
