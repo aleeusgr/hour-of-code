@@ -9,7 +9,7 @@ def draw_petal(heading, lenght, angle):
         return draw_petal(heading + angle, lenght - 10, angle)
 
 # strange flower
-def flower(petals, size = 100, tightness = 80):
+def flower(petals, size = 100, tightness = 60):
 
     ori = tightness*petals
     draw_petal(ori, size, tightness)
@@ -23,7 +23,7 @@ def flower(petals, size = 100, tightness = 80):
     else:
         return flower(petals-1, size, tightness) 
 
-flower(6, 150, 60)
+flower(6, 200, 120)
 
 input()
 # line()
